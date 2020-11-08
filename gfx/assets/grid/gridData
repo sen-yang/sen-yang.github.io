@@ -1,0 +1,41 @@
+no grid:
+macdog:A4 sen$ time ./A4 grid/grid10.lua 
+real    0m0.427s
+user    0m2.397s
+sys     0m0.011s
+
+macdog:A4 sen$ time ./A4 grid/grid100.lua 
+real    0m3.639s
+user    0m24.289s
+sys     0m0.028s
+
+macdog:A4 sen$ time ./A4 grid/grid1000.lua 
+real    0m36.856s
+user    4m13.469s
+sys     0m0.649s
+
+macdog:A4 sen$ time ./A4 grid/grid10000.lua
+real    7m53.202s
+user    47m43.856s
+sys     0m7.744s
+
+grid:
+macdog:A4 sen$ time ./A4 grid/grid10.lua
+real    0m0.227s
+user    0m0.865s
+sys     0m0.010s
+
+macdog:A4 sen$ time ./A4 grid/grid100.lua
+real    0m0.636s
+user    0m2.355s
+sys     0m0.016s
+
+macdog:A4 sen$ time ./A4 grid/grid1000.lua
+real    0m1.355s
+user    0m5.199s
+sys     0m0.031s
+
+macdog:A4 sen$ time ./A4 grid/grid10000.lua
+real    0m1.914s
+user    0m6.026s
+sys     0m0.030s

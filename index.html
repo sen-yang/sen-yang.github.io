@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="application-name" content="&nbsp;"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <title>hi :)</title>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script>
+    var buttons,coolDiv,illerminatiAudio,moveSpeedMultiplier=.69,initialMoveSpeed=420420,illerminatiAppearTime=2e3,illerminatiMoveTime=1e4,shouldntThisBe1=1.8,initialNumberOfButtons=10,chanceIllerminati=.04,chanceMove=.08,chanceAnimal=.16,chanceDoritos=.17,numberOfAnimals=19,isGlobalIllerminati=!1,globalMovingSpeed=0,doritosCounter=1,animalsAllowed=-1,animalSounds=[],isDefined=function(i){return null!=i};function shuffleArray(i){for(var n=i.length-1;n>0;n--){var t=Math.floor(Math.random()*(n+1)),e=i[n];i[n]=i[t],i[t]=e}return i}var hi=function(){window.location.replace("https://www.youtube.com/watch?v=PljS4CSL7PA")},lol=function(){animalsAllowed>=0&&(randomSound=animalSounds[Math.round(Math.random()*animalsAllowed)],randomSound.pause(),randomSound.currentTime=0,randomSound.play()),newButton()},xd=function(){globalMovingSpeed>0?globalMovingSpeed*=moveSpeedMultiplier:globalMovingSpeed=initialMoveSpeed},whoLetTheDogsOut=function(i){animalsAllowed<numberOfAnimals&&animalSounds[++animalsAllowed].play(),i.remove()},doritos=function(i){$("#face").text(":"+new Array(++doritosCounter).join("^")+")"),i.remove()},illerminati=function(){illerminatiAudio.play(),isGlobalIllerminati=!0,shittyButtons=$(".shittyButton");var i=3*Math.round(shittyButtons.size()/3),n=Math.sqrt(2),t=Math.min(window.innerWidth,window.innerHeight*n)*(2/3),e=(window.innerWidth-t)/2,o=t/n,a=i/3;shittyButtons.each(function(){$(this).remove()});for(var l=0;l<a;l++)newButton(!1,o,e+t*(l/(a+1)),illerminatiAppearTime,!0);for(l=1;l<=a;l++)newButton(l==a,o-o*(l/(a+1)),e+t*(l/2/(a+1)),illerminatiAppearTime,!0);for(l=0;l<a;l++)newButton(!1,o-o*(l/(a+1)),e+t*(1-(l+shouldntThisBe1)/2/(a+1)),illerminatiAppearTime,!0)},initButtons=function(){for(var i=0;i<initialNumberOfButtons;i++)newButton();newButton(!0)},newButton=function(i,n,t,e,o){var a=$("<button class='shittyButton'>hi</button>");if(a.isHi=i,i)a.click(function(){hi()});else{var l=Math.random();l<chanceIllerminati&&!isGlobalIllerminati?a.click(function(){illerminati()}):l<chanceMove?a.click(function(){xd()}):l<chanceAnimal?a.click(function(){whoLetTheDogsOut(a)}):l<chanceDoritos?a.click(function(){doritos(a)}):a.click(function(){lol()})}a.css({top:isDefined(n)?n:Math.random()*gayDiv.height(),left:isDefined(t)?t:Math.random()*gayDiv.width(),opacity:0}),gayDiv.append(a),a.animate({opacity:1},isDefined(e)?e:5e3*Math.random()+2e3,function(){o?$(this).animate({top:Math.random()*gayDiv.height(),left:Math.random()*gayDiv.width()},1e4,function(){$(this).animate({opacity:0},5e3*Math.random()+2e3,function(){isGlobalIllerminati=!1,newButton($(this).isHi),$(this).remove()})}):globalMovingSpeed>0?randomMovement($(this),!0,function(){$(this).animate({opacity:0},isDefined(e)?e:5e3*Math.random()+2e3,function(){isGlobalIllerminati||newButton($(this).isHi),$(this).remove()})}):$(this).animate({opacity:0},isDefined(e)?e:5e3*Math.random()+2e3,function(){isGlobalIllerminati||newButton($(this).isHi),$(this).remove()})})},randomMovement=function(i,n,t){i.animate({top:Math.random()*gayDiv.height(),left:Math.random()*gayDiv.width()},Math.random()*globalMovingSpeed,"linear",function(){n?randomMovement(i,!0,t):t()})};$(function(){gayDiv=$("#gayDiv"),illerminatiAudio=document.getElementById("illerminati-audio");for(var i=0;i<numberOfAnimals;i++)animalSounds[i]=document.getElementById("animal-audio-"+i);shuffleArray(animalSounds)});var start=function(){initButtons(),buttons=$(".hi"),$("#start").remove()};
+  </script>
+  <style>
+    body{
+      margin: 0;
+      overflow: hidden;
+      position: relative;
+    }
+    #gayDiv{
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+    }
+    .shittyButton{
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+<audio id="illerminati-audio" preload="auto">
+  <source src="illerminatiAudio.mp3" type="audio/mpeg">
+</audio>
+<audio id="animal-audio-0" preload="auto">
+  <source src="animals/animal0.mp3" type="audio/mpeg">
+</audio>
+<audio id="animal-audio-1" preload="auto">
+  <source src="animals/animal1.mp3" type="audio/mpeg">
+</audio>
+<audio id="animal-audio-2" preload="auto">
+  <source src="animals/animal2.mp3" type="audio/mpeg">
+</audio>
+<audio id="animal-audio-3" preload="auto">
+  <source src="animals/animal3.mp3" type="audio/mpeg">
+</audio>
+<audio id="animal-audio-4" preload="auto">
+  <source src="animals/animal4.mp3" type="audio/mpeg">
+</audio>
+<audio id="animal-audio-5" preload="auto">
+  <source src="animals/animal5.mp3" type="audio/mpeg">
+</audio>
+<audio id="animal-audio-6" preload="auto">
+  <source src="animals/animal6.mp3" type="audio/mpeg">
+</audio>
+<audio id="animal-audio-7" preload="auto">
+  <source src="animals/animal7.mp3" type="audio/mpeg">
+</audio>
+<audio id="animal-audio-8" preload="auto">
+  <source src="animals/animal8.mp3" type="audio/mpeg">
+</audio>
+<audio id="animal-audio-9" preload="auto">
+  <source src="animals/animal9.mp3" type="audio/mpeg">
+</audio>
+<audio id="animal-audio-10" preload="auto">
+  <source src="animals/animal10.mp3" type="audio/mpeg">
+</audio>
+<audio id="animal-audio-11" preload="auto">
+  <source src="animals/animal11.mp3" type="audio/mpeg">
+</audio>
+<audio id="animal-audio-12" preload="auto">
+  <source src="animals/animal12.mp3" type="audio/mpeg">
+</audio>
+<audio id="animal-audio-13" preload="auto">
+  <source src="animals/animal13.mp3" type="audio/mpeg">
+</audio>
+<audio id="animal-audio-14" preload="auto">
+  <source src="animals/animal14.mp3" type="audio/mpeg">
+</audio>
+<audio id="animal-audio-15" preload="auto">
+  <source src="animals/animal15.mp3" type="audio/mpeg">
+</audio>
+<audio id="animal-audio-16" preload="auto">
+  <source src="animals/animal16.mp3" type="audio/mpeg">
+</audio>
+<audio id="animal-audio-17" preload="auto">
+  <source src="animals/animal17.mp3" type="audio/mpeg">
+</audio>
+<audio id="animal-audio-18" preload="auto">
+  <source src="animals/animal18.mp3" type="audio/mpeg">
+</audio>
+
+<div id="face">:)<button id="start" onclick="start()">hi</button></div>
+<div id="coolDiv">
+
+</div>
+</body>
+</html>

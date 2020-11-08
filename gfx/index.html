@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Sen's neato ray tracer</title>
+    <meta name="description" content="Sen's neato ray tracer">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="coolDog.css">
+</head>
+<body>
+
+<div id="sideBar" class="side-bar">
+    <a onclick="goTo('primitives')">Primitives</a>
+    <a onclick="goTo('refraction')">Refraction</a>
+    <a onclick="goTo('aa')">Anti Aliasing</a>
+    <a onclick="goTo('dof')">Depth of Field</a>
+    <a onclick="goTo('texture')">Texture Mapping</a>
+    <a onclick="goTo('bump')">Bump Mapping</a>
+    <a onclick="goTo('shadow')">Soft Shadow</a>
+    <a onclick="goTo('grid')">Grid Acceleration</a>
+    <a onclick="goTo('animation')">Animation</a>
+    <a onclick="goTo('final')">Final Scene</a>
+</div>
+
+<div id="main">
+    <div class="header">
+        Sen's Ray Tracer
+    </div>
+    <div class="description">hey yall, here's my ray tracer</div>
+
+    <div class="section" id="primitives">
+        <div class="inner-section">
+            <div class="section-header">
+                Extra Primitives: Cones and Cylinders
+            </div>
+            <div class="section-body">
+                <img  onclick="clickImage(this)" src="assets/primatives.png">
+            </div>
+        </div>
+    </div>
+    <div class="section" id="refraction">
+        <div class="inner-section">
+            <div class="section-header">
+                Refraction
+            </div>
+            <div class="section-body">
+                <img  onclick="clickImage(this)" src="assets/refract.png">
+            </div>
+        </div>
+    </div>
+    <div class="section" id="aa">
+        <div class="inner-section">
+            <div class="section-header">
+                Jittered Anti Aliasing
+            </div>
+            <div class="section-body">
+                <p>
+                    No anti aliasing
+                </p>
+                <img  onclick="clickImage(this)" src="assets/antiAlias1.png">
+                <p>
+                    Jittered anti aliasing with 5x5 cells per pixel, 25 rays in total per cell
+                </p>
+                <img  onclick="clickImage(this)" src="assets/antiAlias2.png">
+            </div>
+        </div>
+    </div>
+    <div class="section" id="dof">
+        <div class="inner-section">
+            <div class="section-header">
+                Depth of Field
+            </div>
+            <div class="section-body">
+                <p>
+                    Using 50 rays per pixel
+                    <br>
+                    Aperture: 0.3, focal length: 5
+                </p>
+                <img  onclick="clickImage(this)" src="assets/dof.png">
+                <p>
+                    Aperture: 0.3, focal length: 7
+                </p>
+                <img onclick="clickImage(this)" src="assets/dof2.png">
+            </div>
+        </div>
+    </div>
+    <div class="section" id="texture">
+        <div class="inner-section">
+            <div class="section-header">
+                Texture Mapping
+            </div>
+            <div class="section-body">
+                <img onclick="clickImage(this)" src="assets/texture.png">
+            </div>
+        </div>
+    </div>
+    <div class="section" id="bump">
+        <div class="inner-section">
+            <div class="section-header">
+                Bump Mapping
+            </div>
+            <div class="section-body">
+                <p>
+                    Lighting with different intensities form different angles
+                </p>
+                <img onclick="clickImage(this)" src="assets/bump.png">
+                <img onclick="clickImage(this)" src="assets/bump2.png">
+            </div>
+        </div>
+    </div>
+    <div class="section" id="shadow">
+        <div class="inner-section">
+            <div class="section-header">
+                Soft Shadows
+            </div>
+            <div class="section-body">
+                <p>Soft shadows off</p>
+                <img onclick="clickImage(this)" src="assets/softShadow1.png">
+                <p>Soft shadows on, using 50 shadow rays per hit</p>
+                <img onclick="clickImage(this)" src="assets/softShadow2.png">
+            </div>
+        </div>
+    </div>
+    <div class="section" id="grid">
+        <div class="inner-section">
+            <div class="section-header">
+                Grid Acceleration
+            </div>
+            <div class="section-body">
+                <p>
+                    These are the rendering times of a scenes with randomly generated spheres.
+                    <br>
+                    The left graph has a linear scale for time, the right has a logarithmic scale.
+                </p>
+                <div class="row-images">
+                    <img  onclick="clickImage(this)" src="assets/gridGraphLinear.png">
+                    <img  onclick="clickImage(this)" src="assets/gridGraphLog.png">
+                </div>
+                <br>
+                <p>
+                    The rendered scenes
+                </p>
+                <div class="row-images">
+                    <img  onclick="clickImage(this)" src="assets/grid/grid10.png">
+                    <img  onclick="clickImage(this)" src="assets/grid/grid100.png">
+                    <img  onclick="clickImage(this)" src="assets/grid/grid1000.png">
+                    <img  onclick="clickImage(this)" src="assets/grid/grid10000.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="animation">
+        <div class="inner-section">
+            <div class="section-header">
+                Animation
+            </div>
+            <div class="section-body">
+                <video src="assets/animation.mp4" controls></video>
+                <video src="assets/out.mp4" controls></video>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="final">
+        <div class="inner-section">
+            <div class="section-header">
+                Final Scene
+            </div>
+            <div class="section-body">
+                <img  onclick="clickImage(this)" src="assets/final.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        that's it:)
+        <br>
+        its pretty neato
+    </div>
+</div>
+<div id="modal" class="modal">
+    <img class="modal-content" id="modalImage">
+</div>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="coolDog.js"></script>
+</body>
+</html>

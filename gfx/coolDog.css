@@ -1,0 +1,183 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #eeeeee;
+}
+
+.side-bar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+}
+
+.side-bar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    cursor: pointer;
+}
+
+.side-bar a:hover, .offcanvas a:focus {
+    color: #f1f1f1;
+}
+
+.side-bar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    padding: 16px;
+    margin-left: 250px;
+}
+
+@media screen and (max-height: 450px) {
+    .side-bar {
+        padding-top: 15px;
+    }
+
+    .side-bar a {
+        font-size: 18px;
+    }
+}
+
+.header {
+    font-size: 48px;
+    padding: 10px;
+    text-align: center;
+}
+
+.description {
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+.section {
+    text-align: center;
+}
+
+.inner-section{
+    display: inline-block;
+    padding: 10px;
+    margin:10px;
+    background-color: #dddddd;
+    width: 69%;
+    min-width: 500px;
+    max-width: 800px;
+}
+
+.section-header {
+    font-size: 25px;
+    margin:10px;
+    margin-bottom: 20px;
+}
+
+.section-body {
+}
+
+.section-body p{
+    margin-top: 20px;
+    padding-left:10px;
+    padding-right:10px;
+}
+.section-body img{
+    width: calc(100% - 20px);
+    margin: 10px;
+    cursor: pointer;
+}
+
+.section-body video{
+    width: calc(100% - 20px);
+    margin: 10px;
+}
+
+.row-images{
+    width: calc(100% - 20px);
+    margin: 10px;
+    /*display: flex;*/
+    /*flex-wrap: nowrap;*/
+    /*flex-direction: row;*/
+    /*justify-content: space-around;*/
+}
+.row-images img{
+    display: inline-block;
+    width: 49%;
+    margin: 0;
+}
+
+.footer {
+text-align: center;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 100%;
+    max-width: 1100px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.2s;
+    animation-name: zoom;
+    animation-duration: 0.2s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0.5)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0.5)}
+    to {transform:scale(1)}
+}
+
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}

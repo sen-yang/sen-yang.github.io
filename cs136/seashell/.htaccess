@@ -1,0 +1,2 @@
+require valid-user
+AddHandler cgi-script .cgi
